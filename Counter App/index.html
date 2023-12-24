@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- wrappaer -->
+    <div
+      class="w-[100vw] h-[100vh] bg-[#344151] flex flex-col items-center justify-center gap-10"
+    >
+
+    <!-- Image Section -->
+    <div class="img-div">
+      <img class="incr-happy" src="Images/yess.gif" alt="Happy">
+      <img class="decr-sad" src="Images/noooo.gif" alt="Sad">
+      <img class="start-img" src="Images/start.gif" alt="Sad">
+    </div>
+
+
+      <!-- Heading -->
+      <div class="text-[#0398d4] font-medium text-[20px]">
+        Increment & Decrement
+      </div>
+
+      <!-- secondary wrapper -->
+      <div
+        class="bg-white w-[24rem] flex justify-between items-center text-[25px] text-[#344151] rounded-sm py-[1.2rem] gap-12"
+      >
+        <!-- Negetive button -->
+        <button
+          onclick="decrement()"
+          class="border-r-2 border-[#bfbfbf] px-[2rem] flex items-center group active:text-red-700"
+        >
+          <i class="fa-solid fa-minus group-active:scale-125 duration-100"></i>
+        </button>
+
+        <div id="counter" class="font-bold">0</div>
+
+        <!-- Positive button -->
+        <button
+          onclick="increment()"
+          class="border-l-2 border-[#bfbfbf] px-[2rem] flex items-center group active:text-green-600"
+        >
+          <i class="fa-solid fa-plus group-active:scale-125 duration-100"></i>
+        </button>
+      </div>
+
+      <!-- Tertiary wrapper -->
+      <div
+        class="bg-white w-[24rem] flex justify-between items-center text-[25px] text-[#344151] rounded-sm py-[1.2rem] gap-12"
+      >
+        <!-- Negetive 10 button -->
+        <button
+          onclick="decrement_10()"
+          class="border-r-2 border-[#bfbfbf] px-[2rem] flex items-center group"
+        >
+          <img
+            src="Images/minus-10.png"
+            alt="minus image"
+            class="group-active:scale-125 duration-100"
+          />
+        </button>
+        <button
+          onclick="reset()"
+          id="reset"
+          class="font-bold active:scale-110 active:text-blue-500 duration-100"
+        >
+          Reset
+        </button>
+
+        <!-- Positive 10 button -->
+        <button
+          onclick="increment_10()"
+          class="border-l-2 border-[#bfbfbf] px-[2rem] flex items-center group"
+        >
+          <img
+            src="Images/plus-10.png"
+            alt=""
+            class="group-active:scale-125 duration-100"
+          />
+        </button>
+      </div>
+    </div>
+
+
+    <audio src="sounds/increment.mp3" id="sound-incr"></audio>
+    <audio src="sounds/decrement.mp3" id="sound-decr"></audio>
+
+    <audio src="sounds/incre10.mp3" id="sound-incr10"></audio>
+    <audio src="sounds/decr10.mp3" id="sound-decr10"></audio>
+
+    <audio src="sounds/reset.mp3" id="sound-reset"></audio>
+  </body>
+  <script src="index.js"></script>
+</html>
